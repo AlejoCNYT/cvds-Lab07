@@ -1,5 +1,8 @@
 # LABORATORIO 7 - Finalización CI/CD - Manejo de Data - ORM
 
+Daniel Alejandro Acero
+Julian David Triana 
+
 ## PARTE I. FINALIZACIÓN CI/CD
 ### Verificación APP
 - Verificar funcionamiento de app MyShutle en micuenta de la nube de Azure.
