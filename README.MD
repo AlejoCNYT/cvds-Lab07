@@ -1,7 +1,6 @@
 # LABORATORIO 7 - Finalización CI/CD - Manejo de Data - ORM
 
-Daniel Alejandro Acero
-Julian David Triana 
+Daniel Alejandro Acero - Julian David Triana 
 
 ## PARTE I. FINALIZACIÓN CI/CD
 ### Verificación APP
