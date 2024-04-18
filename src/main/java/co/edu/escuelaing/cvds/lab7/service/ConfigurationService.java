@@ -1,6 +1,6 @@
 package co.edu.escuelaing.cvds.lab7.service;
 
-import co.edu.escuelaing.cvds.lab7.model.Configuration;
+import co.edu.escuelaing.cvds.lab7.model.Employee;
 import co.edu.escuelaing.cvds.lab7.repository.ConfigurationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,19 +16,19 @@ public class ConfigurationService {
         this.configurationRepository = configurationRepository;
     }
 
-    public Configuration addConfiguration(Configuration configuration) {
+    public Employee addConfiguration(Employee configuration) {
         return configurationRepository.save(configuration);
     }
 
-    public Configuration getConfiguration(String propiedad) {
+    public Employee getConfiguration(String propiedad) {
         return configurationRepository.findByPropiedad(propiedad).get(1);
     }
 
-    public List<Configuration> getAllConfigurations() {
+    public List<Employee> getAllConfigurations() {
         return configurationRepository.findAll();
     }
 
-    public Configuration updateConfiguration(Configuration configuration) {
+    public Employee updateConfiguration(Employee configuration) {
         if (configurationRepository.findByPropiedad(configuration.getPropiedad()).size() == 0) {
             return configurationRepository.save(configuration);
         }

@@ -1,6 +1,6 @@
 package co.edu.escuelaing.cvds.lab7.controller;
 
-import co.edu.escuelaing.cvds.lab7.model.Configuration;
+import co.edu.escuelaing.cvds.lab7.model.Employee;
 import co.edu.escuelaing.cvds.lab7.service.ConfigurationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,13 +33,13 @@ public class ConfigurationController {
 
     @GetMapping("/example/api/configurations")
     @ResponseBody
-    public List<Configuration> exampleApiConfigurations() {
+    public List<Employee> exampleApiConfigurations() {
         return configurationService.getAllConfigurations();
     }
 
     @PostMapping("/example/api/configurations")
     @ResponseBody
-    public List<Configuration> exampleApiConfigurations(@RequestBody Configuration configuration) {
+    public List<Employee> exampleApiConfigurations(@RequestBody Employee configuration) {
         configurationService.addConfiguration(configuration);
         return configurationService.getAllConfigurations();
     }

@@ -1,6 +1,6 @@
 package co.edu.escuelaing.cvds.lab7;
 
-import co.edu.escuelaing.cvds.lab7.model.Configuration;
+import co.edu.escuelaing.cvds.lab7.model.Employee;
 import co.edu.escuelaing.cvds.lab7.model.User;
 import co.edu.escuelaing.cvds.lab7.model.UserRole;
 import co.edu.escuelaing.cvds.lab7.repository.UserRepository;
@@ -39,9 +39,9 @@ public class Lab7Application {
 	public CommandLineRunner run() {
 		return (args) -> {
 			log.info("Adding Configurations....");
-			configurationService.addConfiguration(new Configuration("premio", "810000"));
-			configurationService.addConfiguration(new Configuration("descuento", "0.1"));
-			configurationService.addConfiguration(new Configuration("app-name", "Miraculous: Las Aventuras de Ladybug"));
+			configurationService.addConfiguration(new Employee("premio", "810000"));
+			configurationService.addConfiguration(new Employee("descuento", "0.1"));
+			configurationService.addConfiguration(new Employee("app-name", "Miraculous: Las Aventuras de Ladybug"));
 
 			log.info("\nGetting all configurations....");
 			configurationService.getAllConfigurations().forEach(configuration -> System.out.println(configuration));

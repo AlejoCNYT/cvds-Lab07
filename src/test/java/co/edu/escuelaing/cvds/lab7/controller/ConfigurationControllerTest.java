@@ -1,6 +1,6 @@
 package co.edu.escuelaing.cvds.lab7.controller;
 
-import co.edu.escuelaing.cvds.lab7.model.Configuration;
+import co.edu.escuelaing.cvds.lab7.model.Employee;
 import co.edu.escuelaing.cvds.lab7.repository.ConfigurationRepository;
 import co.edu.escuelaing.cvds.lab7.service.ConfigurationService;
 import org.junit.jupiter.api.AfterEach;
@@ -50,8 +50,8 @@ class ConfigurationControllerTest {
     @Test
     void example() {
         // Arrange / Given / Dado - precondition or setup
-        Configuration configuration = new Configuration("premio", "800000");
-        when(mockConfigurationRepository.findByPropiedad("premio")).thenReturn(Arrays.asList(configuration));
+        Employee employee = new Employee("premio", "800000");
+        when(mockConfigurationRepository.findByPropiedad("premio")).thenReturn(Arrays.asList(employee));
         // Act / When / Cuando - action or the behaviour that we are going test
         String value = configurationController.example(model);
         // Assert / Then / Entonces - verify the output

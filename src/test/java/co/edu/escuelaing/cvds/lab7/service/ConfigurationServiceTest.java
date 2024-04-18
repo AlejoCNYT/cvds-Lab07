@@ -1,6 +1,6 @@
 package co.edu.escuelaing.cvds.lab7.service;
 
-import co.edu.escuelaing.cvds.lab7.model.Configuration;
+import co.edu.escuelaing.cvds.lab7.model.Employee;
 import co.edu.escuelaing.cvds.lab7.repository.ConfigurationRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -29,10 +29,10 @@ class ConfigurationServiceTest {
     @Test
     void getAllConfigurations() {
         // Arrange / Given - precondition or setup
-        Configuration configuration = new Configuration("premio", "800000");
+        Employee configuration = new Employee("premio", "800000");
         when(mockConfigurationRepository.findAll()).thenReturn(Arrays.asList(configuration));
         // Act / When - action or the behaviour that we are going test
-        List<Configuration> allConfigurations = configurationService.getAllConfigurations();
+        List<Employee> allConfigurations = configurationService.getAllConfigurations();
         // Assert / Then - verify the output
         assertEquals(1, allConfigurations.size());
         assertEquals("premio", allConfigurations.get(0).getPropiedad());
@@ -48,7 +48,7 @@ class ConfigurationServiceTest {
         // Arrange / Given - precondition or setup
         String property = "premio";
         String expectedValue = "1000";
-        Configuration configuration = new Configuration(property, expectedValue);
+        Employee configuration = new Employee(property, expectedValue);
         when(mockConfigurationRepository.findByPropiedad(property)).thenReturn(Arrays.asList(configuration));
         // Act / When - action or the behaviour that we are going test
         String value = configurationService.getPremio();
